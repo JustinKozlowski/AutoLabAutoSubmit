@@ -10,3 +10,4 @@ jobs:
         env:
           UBIT_USERNAME: ${{ secrets.UBITUsername }}
           UBIT_PASSWORD: ${{ secrets.UBITPassword }}
+          COMMIT: ${{ github.event.head_commit.message }}
