@@ -3,7 +3,7 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-    # if: startsWith(github.event.head_commit.message, 'submit ') 
+    if: startsWith(github.event.head_commit.message, 'submit ') 
     steps:
       - uses: actions/checkout@v3
       - uses: ./
