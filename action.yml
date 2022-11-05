@@ -1,4 +1,5 @@
 name: UB AutoLab Auto Submit
+Description: Actyio to submit to UB AutoLab
 runs:
   using: "composite"
   steps:
