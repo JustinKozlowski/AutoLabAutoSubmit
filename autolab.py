@@ -51,7 +51,7 @@ if __name__ == "__main__":
     parser.add_argument('commit')
     args = parser.parse_args()
     if ('UBIT_USERNAME' not in os.environ) or ('UBIT_PASSWORD' not in os.environ) or not os.environ['UBIT_USERNAME'] or os.environ['UBIT_PASSWORD']:
-        Exception('''Propper secrets/environment variables are not set.
+        raise Exception('''Propper secrets/environment variables are not set.
 You must have UBIT_USERNAME and UBIT_PASSWORD set as environment variables for this action.
 
 ex:
@@ -62,6 +62,6 @@ ex:
 ''')
     info = parse_commit(args.commit)
     if not info:
-        Exception('Not a submission Commit, start commit message with "submit " to submit: \nAdd if: startsWith(github.event.head_commit.message, "submit ") to this step in the action.yml')
+        raise Exception('Not a submission Commit, start commit message with "submit " to submit: \nAdd if: startsWith(github.event.head_commit.message, "submit ") to this step in the action.yml')
     else:
         main(info)
