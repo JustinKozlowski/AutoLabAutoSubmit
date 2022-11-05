@@ -24,6 +24,6 @@ runs:
       shell: bash
     - name: Run AutoLab Script
       run: |
-        python -m autolabsubmit.py "$COMMIT"
+        python -m autolabsubmit.autolab.py "$COMMIT"
       shell: bash
         
