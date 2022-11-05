@@ -20,7 +20,7 @@ runs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install ubit-autolab-auto-submit==0.0.3
+        pip install ubit-autolab-auto-submit --no-cache
       shell: bash
     - name: Run AutoLab Script
       run: |
