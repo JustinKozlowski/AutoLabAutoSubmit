@@ -41,7 +41,7 @@ def main(assignment, file):
     driver.find_element(By.XPATH, "//form[@id='new_submission']/label").click()
     # Submit file
     root = os.path.dirname(__file__)
-    driver.find_element(By.ID, 'submission_file').send_keys(root + file)
+    driver.find_element(By.ID, 'submission_file').send_keys(f"{root}/{file}")
     print('Successfuly Submitted')
     driver.quit()
 
