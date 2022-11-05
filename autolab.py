@@ -62,6 +62,6 @@ ex:
 ''')
     info = parse_commit(args.commit)
     if not info:
-        print('Not a submission Commit')
+        print('Not a submission Commit, start commit message with "submit " to submit')
     else:
         main(info)
