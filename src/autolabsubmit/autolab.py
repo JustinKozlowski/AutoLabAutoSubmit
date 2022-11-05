@@ -40,7 +40,7 @@ def main(assignment, file):
     # Authorize AI
     driver.find_element(By.XPATH, "//form[@id='new_submission']/label").click()
     # Submit file
-    driver.find_element(By.ID, 'submission_file').send_keys(f"./{file}")
+    driver.find_element(By.ID, 'submission_file').send_keys(f"{os.getcwd()}/{file}")
     print('Successfuly Submitted')
     driver.quit()
 
