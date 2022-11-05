@@ -50,7 +50,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('commit')
     args = parser.parse_args()
-    if ('UBIT_USERNAME' not in os.environ) or ('UBIT_PASSWORD' not in os.environ) or not os.environ['UBIT_USERNAME'] or os.environ['UBIT_PASSWORD']:
+    if ('UBIT_USERNAME' not in os.environ) or ('UBIT_PASSWORD' not in os.environ) or not os.environ['UBIT_USERNAME'] or not os.environ['UBIT_PASSWORD']:
         raise Exception('''Propper secrets/environment variables are not set.
 You must have UBIT_USERNAME and UBIT_PASSWORD set as environment variables for this action.
 
