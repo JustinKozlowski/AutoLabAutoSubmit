@@ -64,4 +64,4 @@ ex:
     if not info:
         raise Exception('Not a submission Commit, start commit message with "submit " to submit: \nAdd if: startsWith(github.event.head_commit.message, "submit ") to this step in the action.yml')
     else:
-        main(info)
+        main(**info)
