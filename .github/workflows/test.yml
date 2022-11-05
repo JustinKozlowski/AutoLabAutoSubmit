@@ -20,7 +20,7 @@ jobs:
   #         TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
 
   test:
-    needs: [push]
+    # needs: [push]
     runs-on: ubuntu-latest
     if: startsWith(github.event.head_commit.message, 'submit ') 
     steps:
