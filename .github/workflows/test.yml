@@ -16,7 +16,7 @@ jobs:
           python setup.py sdist
           twine upload dist/* --username __token__
         env:
-        TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+          TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
 
   test:
     runs-on: ubuntu-latest
